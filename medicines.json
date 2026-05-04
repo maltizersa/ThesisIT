@@ -23,5 +23,47 @@
   { "id": 122, "name": "Bioflu" },
   { "id": 123, "name": "Kremil-S" },
   { "id": 124, "name": "Diatabs" },
-  { "id": 125, "name": "Tuseran Forte" }
+  { "id": 125, "name": "Tuseran Forte" },
+  { "id": 126, "name": "Ibuprofen 200mg" },
+  { "id": 127, "name": "Ibuprofen 400mg" },
+  { "id": 128, "name": "Paracetamol 250mg Syrup" },
+  { "id": 129, "name": "Paracetamol 500mg Tablet" },
+  { "id": 130, "name": "Amoxicillin 250mg Capsule" },
+  { "id": 131, "name": "Amoxicillin 500mg Capsule" },
+  { "id": 132, "name": "Cefalexin 500mg" },
+  { "id": 133, "name": "Azithromycin 500mg" },
+  { "id": 134, "name": "Metronidazole 500mg" },
+  { "id": 135, "name": "Clindamycin 300mg" },
+
+  { "id": 136, "name": "Cetirizine 10mg" },
+  { "id": 137, "name": "Loratadine 10mg" },
+  { "id": 138, "name": "Fexofenadine 180mg" },
+  { "id": 139, "name": "Diphenhydramine 25mg" },
+
+  { "id": 140, "name": "Omeprazole 20mg" },
+  { "id": 141, "name": "Pantoprazole 40mg" },
+  { "id": 142, "name": "Esomeprazole 40mg" },
+
+  { "id": 143, "name": "Amlodipine 5mg" },
+  { "id": 144, "name": "Amlodipine 10mg" },
+  { "id": 145, "name": "Losartan 50mg" },
+  { "id": 146, "name": "Losartan 100mg" },
+  { "id": 147, "name": "Atenolol 50mg" },
+  { "id": 148, "name": "Metoprolol 50mg" },
+
+  { "id": 149, "name": "Metformin 500mg" },
+  { "id": 150, "name": "Metformin 850mg" },
+  { "id": 151, "name": "Glimepiride 2mg" },
+  { "id": 152, "name": "Gliclazide 80mg" },
+
+  { "id": 153, "name": "Salbutamol Inhaler" },
+  { "id": 154, "name": "Salbutamol Nebules" },
+  { "id": 155, "name": "Budesonide Inhaler" },
+
+  { "id": 156, "name": "Mefenamic Acid 500mg" },
+  { "id": 157, "name": "Dextromethorphan Syrup" },
+  { "id": 158, "name": "Carbocisteine Syrup" },
+
+  { "id": 159, "name": "Multivitamins + Minerals" },
+  { "id": 160, "name": "Vitamin B-Complex" }
 ]

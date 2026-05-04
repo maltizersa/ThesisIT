@@ -37,5 +37,64 @@
 
   { "id": 19, "name": "Watsons SM San Carlos", "address": "SM San Carlos", "distance": 6.5, "phone": "(075) 529-9900", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 205, "lat": 15.9285, "lng": 120.3490 },
 
-  { "id": 20, "name": "Rose Pharmacy Lingayen", "address": "Maramba Blvd, Lingayen", "distance": 11.5, "phone": "(075) 542-5566", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 102, "lat": 16.0220, "lng": 120.2320 }
+  { "id": 20, "name": "Rose Pharmacy Lingayen", "address": "Maramba Blvd, Lingayen", "distance": 11.5, "phone": "(075) 542-5566", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 102, "lat": 16.0220, "lng": 120.2320 },
+  { "id": 21, "name": "Generika Drugstore Umingan", "address": "Poblacion, Umingan, Pangasinan", "distance": 13.2, "phone": "(075) 600-1122", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 90, "lat": 16.8700, "lng": 120.7970 },
+
+  { "id": 22, "name": "Mercury Drug Tayug", "address": "Rizal St, Tayug, Pangasinan", "distance": 14.0, "phone": "(075) 606-3344", "hours": "8:00 AM – 10:00 PM", "stock_status": "Stock available", "stock_units": 120, "lat": 16.0270, "lng": 120.7430 },
+
+  { "id": 23, "name": "Watsons SM Rosales North", "address": "SM Rosales Expansion, Pangasinan", "distance": 5.6, "phone": "(075) 582-7788", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 180, "lat": 15.8950, "lng": 120.6335 },
+
+  { "id": 24, "name": "Rose Pharmacy Urdaneta East", "address": "Nancayasan, Urdaneta City", "distance": 3.1, "phone": "(075) 568-2211", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 110, "lat": 15.9740, "lng": 120.5770 },
+
+  { "id": 25, "name": "Mercury Drug Pozorrubio", "address": "Poblacion, Pozorrubio", "distance": 18.2, "phone": "(075) 551-9901", "hours": "8:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 95, "lat": 16.1130, "lng": 120.5440 },
+
+  { "id": 26, "name": "Generika Drugstore Manaoag", "address": "Poblacion, Manaoag", "distance": 9.4, "phone": "(075) 540-3322", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 140, "lat": 16.0430, "lng": 120.4850 },
+
+  { "id": 27, "name": "Watsons Dagupan CSI Mall", "address": "CSI Mall, Dagupan City", "distance": 1.9, "phone": "(075) 522-8890", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 250, "lat": 16.0438, "lng": 120.3338 },
+
+  { "id": 28, "name": "Rose Pharmacy San Jacinto", "address": "Poblacion, San Jacinto", "distance": 8.6, "phone": "(075) 550-1120", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 80, "lat": 16.0730, "lng": 120.4500 },
+
+  { "id": 29, "name": "Mercury Drug Mapandan", "address": "Rizal St, Mapandan", "distance": 6.8, "phone": "(075) 523-6670", "hours": "8:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 110, "lat": 16.0200, "lng": 120.4520 },
+
+  { "id": 30, "name": "Generika Drugstore Aguilar", "address": "Poblacion, Aguilar", "distance": 16.4, "phone": "(075) 560-7780", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 70, "lat": 15.8880, "lng": 120.2000 },
+
+  { "id": 31, "name": "Watsons Alaminos Lucap", "address": "Lucap Wharf, Alaminos City", "distance": 10.9, "phone": "(075) 551-3340", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 160, "lat": 16.1552, "lng": 119.9802 },
+
+  { "id": 32, "name": "Rose Pharmacy Sual", "address": "Poblacion, Sual", "distance": 12.3, "phone": "(075) 540-9900", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 85, "lat": 16.0660, "lng": 120.0970 },
+
+  { "id": 33, "name": "Mercury Drug Bolinao", "address": "Poblacion, Bolinao", "distance": 20.5, "phone": "(075) 551-8800", "hours": "8:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 100, "lat": 16.3890, "lng": 119.8940 },
+
+  { "id": 34, "name": "Generika Drugstore Infanta", "address": "Poblacion, Infanta", "distance": 22.0, "phone": "(075) 560-1100", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 75, "lat": 16.0500, "lng": 120.1500 },
+
+  { "id": 35, "name": "Watsons Urdaneta Victory Mall", "address": "Victory Mall, Urdaneta City", "distance": 2.4, "phone": "(075) 568-9001", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 230, "lat": 15.9755, "lng": 120.5715 },
+
+  { "id": 36, "name": "Rose Pharmacy Villasis North", "address": "Poblacion, Villasis", "distance": 6.2, "phone": "(075) 555-2230", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 95, "lat": 15.9035, "lng": 120.5890 },
+
+  { "id": 37, "name": "Mercury Drug San Fabian East", "address": "Barangay Cayanga, San Fabian", "distance": 7.9, "phone": "(075) 542-7780", "hours": "8:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 88, "lat": 16.1310, "lng": 120.4015 },
+
+  { "id": 38, "name": "Generika Drugstore Binmaley North", "address": "Poblacion Norte, Binmaley", "distance": 4.5, "phone": "(075) 554-9900", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 105, "lat": 16.0310, "lng": 120.2710 },
+
+  { "id": 39, "name": "Watsons Lingayen Capitol", "address": "Capitol Grounds, Lingayen", "distance": 11.0, "phone": "(075) 542-1120", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 210, "lat": 16.0215, "lng": 120.2315 },
+
+  { "id": 40, "name": "Rose Pharmacy Dagupan West", "address": "Arellano St Extension, Dagupan", "distance": 2.0, "phone": "(075) 523-4450", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 130, "lat": 16.0440, "lng": 120.3345 },
+
+  { "id": 41, "name": "Mercury Drug Mangaldan North", "address": "Zone 3, Mangaldan", "distance": 0.7, "phone": "(075) 523-9988", "hours": "8:00 AM – 10:00 PM", "stock_status": "Stock available", "stock_units": 140, "lat": 16.0715, "lng": 120.4040 },
+
+  { "id": 42, "name": "Generika Drugstore Rosales West", "address": "Carmen West, Rosales", "distance": 6.0, "phone": "(075) 582-6600", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 90, "lat": 15.8955, "lng": 120.6340 },
+
+  { "id": 43, "name": "Watsons San Carlos East", "address": "East Poblacion, San Carlos City", "distance": 6.3, "phone": "(075) 529-7700", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 220, "lat": 15.9288, "lng": 120.3495 },
+
+  { "id": 44, "name": "Rose Pharmacy Bayambang Central", "address": "Poblacion Centro, Bayambang", "distance": 7.2, "phone": "(075) 575-3340", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 100, "lat": 15.8075, "lng": 120.4555 },
+
+  { "id": 45, "name": "Mercury Drug Umingan Central", "address": "Poblacion Centro, Umingan", "distance": 13.5, "phone": "(075) 600-9900", "hours": "8:00 AM – 10:00 PM", "stock_status": "Stock available", "stock_units": 110, "lat": 16.8705, "lng": 120.7980 },
+
+  { "id": 46, "name": "Generika Drugstore Tayug East", "address": "East Poblacion, Tayug", "distance": 14.3, "phone": "(075) 606-2210", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 85, "lat": 16.0275, "lng": 120.7435 },
+
+  { "id": 47, "name": "Watsons Pozorrubio Central", "address": "Poblacion Centro, Pozorrubio", "distance": 18.0, "phone": "(075) 551-7722", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 170, "lat": 16.1135, "lng": 120.5445 },
+
+  { "id": 48, "name": "Rose Pharmacy Manaoag Basilica", "address": "Near Basilica, Manaoag", "distance": 9.1, "phone": "(075) 540-8811", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 150, "lat": 16.0435, "lng": 120.4855 },
+
+  { "id": 49, "name": "Mercury Drug Mapandan North", "address": "North Poblacion, Mapandan", "distance": 6.9, "phone": "(075) 523-1110", "hours": "8:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 95, "lat": 16.0205, "lng": 120.4525 },
+
+  { "id": 50, "name": "Generika Drugstore Aguilar West", "address": "West Poblacion, Aguilar", "distance": 16.7, "phone": "(075) 560-2200", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 80, "lat": 15.8885, "lng": 120.2010 }
 ]

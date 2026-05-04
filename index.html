@@ -1931,7 +1931,7 @@
       div.onclick = () => {
         input.value = med.name;
         suggestionsBox.innerHTML = '';
-        doSearch();
+        startAction();
       };
 
       suggestionsBox.appendChild(div);
@@ -2151,7 +2151,7 @@
     showPage('page-category');
   }
 
-  function setAndSearch(n) { document.getElementById('medicine-input').value = n; doSearch(); }
+  function setAndSearch(n) { document.getElementById('medicine-input').value = n; startAction(); }
   // function doSearch() {
   //   // startAction();
   //   const raw = document.getElementById('medicine-input').value.trim(); if (!raw) return;
@@ -2261,14 +2261,14 @@
       document.getElementById('section-found').classList.add('visible'),
     10);
   }
-  document.getElementById('medicine-input').addEventListener('keydown', e => { if (e.key==='Enter') doSearch(); });
+  document.getElementById('medicine-input').addEventListener('keydown', e => { if (e.key==='Enter') startAction(); });
 
   function setAndSearchCat(n) { document.getElementById('medicine-input-cat').value = n; doSearchCat(); }
   function doSearchCat() {
     const v = document.getElementById('medicine-input-cat').value.trim(); goHome();
-    if (v) { document.getElementById('medicine-input').value = v; setTimeout(doSearch,50); }
+    if (v) { document.getElementById('medicine-input').value = v; setTimeout(startAction,50); }
   }
-  function searchFromCat(n) { goHome(); document.getElementById('medicine-input').value = n; setTimeout(doSearch,50); }
+  function searchFromCat(n) { goHome(); document.getElementById('medicine-input').value = n; setTimeout(startAction,50); }
   document.getElementById('medicine-input-cat').addEventListener('keydown', e => { if (e.key==='Enter') doSearchCat(); });
 
 

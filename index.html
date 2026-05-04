@@ -1056,6 +1056,29 @@
     }
     .pay-success-close:hover { opacity: .88; }
 
+    .suggestions-box {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-top: none;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 999;
+    }
+
+    .suggestion-item {
+      padding: 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .suggestion-item:hover {
+      background: #f5f5f5;
+    }
+
   </style>
 </head>
 <body>
@@ -1595,11 +1618,28 @@
       <div class="search-card">
         <h2>Search for Medicine</h2>
         <p>Enter the name of the medicine you're looking for</p>
-        <div class="search-row">
+        <!-- <div class="search-row">
           <div class="search-input-wrap">
             <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             <input type="text" id="medicine-input" placeholder="e.g., Aspirin, Paracetamol, Vitamins…" />
           </div>
+          <button class="search-btn" onclick="startAction()">Search</button>
+        </div> -->
+        <div class="search-row">
+          <div class="search-input-wrap" style="position: relative;">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+
+            <input type="text" id="medicine-input"
+              placeholder="e.g., Aspirin, Paracetamol, Vitamins…" autocomplete="off"/>
+
+            <!-- 👇 ADD THIS -->
+            <div id="suggestions" class="suggestions-box"></div>
+          </div>
+
+          <!-- fix typo later -->
           <button class="search-btn" onclick="startAction()">Search</button>
         </div>
         <div class="try-row">
@@ -1796,20 +1836,37 @@
 </div>
 
 <script>
-  function openDirections(address) {
-    const query = encodeURIComponent(address);
-    window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, '_blank');
-  }
-  fetch('pharmacies.json')
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById('section-found');
+  // function openDirections(address) {
+  //   const query = encodeURIComponent(address);
+  //   window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, '_blank');
+  // }
 
+  function openDirections(address) {
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+    window.open(url, '_blank');
+  }
+  let pharmacies = [];
+  let medicines = [];
+  let inventory = [];
+
+  // LOAD ALL DATA
+  async function loadAll() {
+    pharmacies = await fetch('pharmacies.json').then(r => r.json());
+    medicines = await fetch('medicines.json').then(r => r.json());
+    inventory = await fetch('inventory.json').then(r => r.json());
+
+    renderPharmacies(pharmacies); // default view
+  }
+
+  loadAll();
+
+  function renderPharmacies(list) {
+    const container = document.getElementById('section-found');
     const heading = container.querySelector('.results-heading').outerHTML;
 
     let html = heading;
 
-    data.forEach(p => {
+    list.forEach(p => {
       html += `
         <div class="pharmacy-card">
           <div class="pharmacy-body">
@@ -1830,20 +1887,8 @@
             </div>
 
             <div class="pharmacy-meta">
-              <div class="meta-row">
-                <svg viewBox="0 0 24 24">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-                ${p.phone}
-              </div>
-
-              <div class="meta-row">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
-                </svg>
-                ${p.hours}
-              </div>
+              <div class="meta-row">${p.phone}</div>
+              <div class="meta-row">${p.hours}</div>
             </div>
 
             <div class="pharmacy-footer">
@@ -1853,10 +1898,6 @@
 
             <button class="directions-btn"
               onclick="openDirections('${p.address}')">
-              <svg viewBox="0 0 24 24">
-                <line x1="22" y1="2" x2="11" y2="13"/>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
               Get Directions
             </button>
 
@@ -1866,6 +1907,35 @@
     });
 
     container.innerHTML = html;
+  }
+
+  const input = document.getElementById('medicine-input');
+  const suggestionsBox = document.getElementById('suggestions');
+
+  input.addEventListener('input', () => {
+    const query = input.value.toLowerCase().trim();
+
+    suggestionsBox.innerHTML = '';
+
+    if (!query) return;
+
+    const matches = medicines.filter(m =>
+      m.name.toLowerCase().includes(query)
+    );
+
+    matches.slice(0, 5).forEach(med => {
+      const div = document.createElement('div');
+      div.className = 'suggestion-item';
+      div.textContent = med.name;
+
+      div.onclick = () => {
+        input.value = med.name;
+        suggestionsBox.innerHTML = '';
+        doSearch();
+      };
+
+      suggestionsBox.appendChild(div);
+    });
   });
   const USERS = {}; 
   let currentUser = null;
@@ -2082,15 +2152,114 @@
   }
 
   function setAndSearch(n) { document.getElementById('medicine-input').value = n; doSearch(); }
+  // function doSearch() {
+  //   // startAction();
+  //   const raw = document.getElementById('medicine-input').value.trim(); if (!raw) return;
+  //   const found = IN_STOCK.some(m => raw.toLowerCase().includes(m) || m.includes(raw.toLowerCase()));
+  //   document.getElementById('section-found').classList.remove('visible');
+  //   document.getElementById('section-not-found').classList.remove('visible');
+  //   document.getElementById('browse-section').style.display = 'none';
+  //   if (found) { document.getElementById('found-title').textContent = `Found 3 pharmacies with "${raw}"`; setTimeout(() => document.getElementById('section-found').classList.add('visible'), 10); }
+  //   else        { document.getElementById('not-found-title').textContent = `No pharmacies found with "${raw}"`; setTimeout(() => document.getElementById('section-not-found').classList.add('visible'), 10); }
+  // }
+
+  // function doSearch() {
+  //   const raw = document.getElementById('medicine-input').value.trim().toLowerCase();
+  //   if (!raw) return;
+
+  //   // 1. find medicine from JSON
+  //   const med = medicines.find(m => m.name.toLowerCase().includes(raw));
+
+  //   // reset UI
+  //   document.getElementById('section-found').classList.remove('visible');
+  //   document.getElementById('section-not-found').classList.remove('visible');
+  //   document.getElementById('browse-section').style.display = 'none';
+
+  //   if (!med) {
+  //     document.getElementById('not-found-title').textContent = `No medicine found for "${raw}"`;
+  //     setTimeout(() => document.getElementById('section-not-found').classList.add('visible'), 10);
+  //     return;
+  //   }
+
+  //   // 2. check inventory
+  //   const available = inventory.filter(i =>
+  //     i.medicine_id === med.id && i.stock > 0
+  //   );
+
+  //   if (available.length === 0) {
+  //     document.getElementById('not-found-title').textContent = `No pharmacies found with "${med.name}"`;
+  //     setTimeout(() => document.getElementById('section-not-found').classList.add('visible'), 10);
+  //     return;
+  //   }
+
+  //   // 3. get pharmacies
+  //   let results = available.map(item => {
+  //     return pharmacies.find(p => p.id === item.pharmacy_id);
+  //   });
+
+  //   // remove duplicates
+  //   results = results.filter((v, i, a) =>
+  //     a.findIndex(t => t.id === v.id) === i
+  //   );
+
+  //   // sort by nearest
+  //   results.sort((a, b) => a.distance - b.distance);
+
+  //   // 4. update title
+  //   document.getElementById('found-title').textContent =
+  //     `Found ${results.length} pharmacies with "${med.name}"`;
+
+  //   // 5. render using your existing UI function
+  //   renderPharmacies(results);
+
+  //   setTimeout(() => document.getElementById('section-found').classList.add('visible'), 10);
+  // }
+
   function doSearch() {
-    // startAction();
-    const raw = document.getElementById('medicine-input').value.trim(); if (!raw) return;
-    const found = IN_STOCK.some(m => raw.toLowerCase().includes(m) || m.includes(raw.toLowerCase()));
+    const raw = document.getElementById('medicine-input').value.toLowerCase().trim();
+    if (!raw) return;
+
+    const med = medicines.find(m =>
+      m.name.toLowerCase().includes(raw)
+    );
+
     document.getElementById('section-found').classList.remove('visible');
     document.getElementById('section-not-found').classList.remove('visible');
     document.getElementById('browse-section').style.display = 'none';
-    if (found) { document.getElementById('found-title').textContent = `Found 3 pharmacies with "${raw}"`; setTimeout(() => document.getElementById('section-found').classList.add('visible'), 10); }
-    else        { document.getElementById('not-found-title').textContent = `No pharmacies found with "${raw}"`; setTimeout(() => document.getElementById('section-not-found').classList.add('visible'), 10); }
+
+    if (!med) {
+      document.getElementById('not-found-title').textContent =
+        `No medicine found for "${raw}"`;
+
+      setTimeout(() =>
+        document.getElementById('section-not-found').classList.add('visible'),
+      10);
+
+      return;
+    }
+
+    const available = inventory.filter(i =>
+      i.medicine_id === med.id && i.stock > 0
+    );
+
+    let results = available.map(i =>
+      pharmacies.find(p => p.id === i.pharmacy_id)
+    );
+
+    results = results.filter((v, i, a) =>
+      a.findIndex(t => t.id === v.id) === i
+    );
+
+    results.sort((a, b) => a.distance - b.distance);
+
+    document.getElementById('found-title').textContent =
+      `Found ${results.length} pharmacies with "${med.name}"`;
+
+    renderPharmacies(results);
+
+    setTimeout(() =>
+      document.getElementById('section-found').classList.add('visible'),
+    10);
   }
   document.getElementById('medicine-input').addEventListener('keydown', e => { if (e.key==='Enter') doSearch(); });
 

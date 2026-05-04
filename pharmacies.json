@@ -1,38 +1,41 @@
 [
-  {
-    "id": 1,
-    "name": "HealthPlus Pharmacy",
-    "address": "123 Main St, Downtown",
-    "distance": 0.5,
-    "phone": "(555) 123-4567",
-    "hours": "Open 24/7",
-    "stock_status": "Stock available",
-    "stock_units": 150,
-    "lat": 16.0703,
-    "lng": 120.4026
-  },
-  {
-    "id": 2,
-    "name": "CareRx Pharmacy",
-    "address": "456 Oak Avenue",
-    "distance": 1.2,
-    "phone": "(555) 234-5678",
-    "hours": "Mon–Sat: 8AM–10PM",
-    "stock_status": "Stock available",
-    "stock_units": 85,
-    "lat": 16.0720,
-    "lng": 120.4010
-  },
-  {
-    "id": 3,
-    "name": "MediCare Center",
-    "address": "789 Elm Street",
-    "distance": 2.1,
-    "phone": "(555) 345-6789",
-    "hours": "Mon–Fri: 9AM–9PM",
-    "stock_status": "Stock available",
-    "stock_units": 120,
-    "lat": 16.0735,
-    "lng": 120.3990
-  }
+  { "id": 1, "name": "Mercury Drug Mangaldan", "address": "Rizal Ave, Mangaldan, Pangasinan", "distance": 0.5, "phone": "(075) 523-1122", "hours": "8:00 AM – 10:00 PM", "stock_status": "Stock available", "stock_units": 120, "lat": 16.0703, "lng": 120.4026 },
+
+  { "id": 2, "name": "Mercury Drug Dagupan Perez", "address": "Perez Blvd, Dagupan City", "distance": 1.2, "phone": "(075) 522-3344", "hours": "Open 24/7", "stock_status": "Stock available", "stock_units": 95, "lat": 16.0430, "lng": 120.3330 },
+
+  { "id": 3, "name": "Generika Drugstore Urdaneta", "address": "National Highway, Urdaneta City", "distance": 2.1, "phone": "(075) 568-7788", "hours": "8:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 140, "lat": 15.9760, "lng": 120.5710 },
+
+  { "id": 4, "name": "Rose Pharmacy Calasiao", "address": "Public Market, Calasiao", "distance": 2.8, "phone": "(075) 533-9988", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 110, "lat": 16.0170, "lng": 120.3580 },
+
+  { "id": 5, "name": "Watsons SM Rosales", "address": "SM City Rosales, Pangasinan", "distance": 5.4, "phone": "(075) 582-1122", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 200, "lat": 15.8940, "lng": 120.6320 },
+
+  { "id": 6, "name": "Mercury Drug San Carlos", "address": "Roxas Blvd, San Carlos City", "distance": 6.1, "phone": "(075) 529-4455", "hours": "8:00 AM – 10:00 PM", "stock_status": "Stock available", "stock_units": 130, "lat": 15.9280, "lng": 120.3480 },
+
+  { "id": 7, "name": "Generika Drugstore Bayambang", "address": "Poblacion, Bayambang", "distance": 7.0, "phone": "(075) 575-2233", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 90, "lat": 15.8070, "lng": 120.4550 },
+
+  { "id": 8, "name": "Rose Pharmacy Alaminos", "address": "Quezon Ave, Alaminos City", "distance": 10.5, "phone": "(075) 551-7788", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 105, "lat": 16.1550, "lng": 119.9810 },
+
+  { "id": 9, "name": "Mercury Drug Lingayen", "address": "Capitol Area, Lingayen", "distance": 11.2, "phone": "(075) 542-3344", "hours": "8:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 125, "lat": 16.0210, "lng": 120.2310 },
+
+  { "id": 10, "name": "Watsons SM Urdaneta", "address": "SM Urdaneta Central", "distance": 12.0, "phone": "(075) 568-9900", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 210, "lat": 15.9765, "lng": 120.5720 },
+
+  { "id": 11, "name": "Generika Drugstore Dagupan", "address": "Arellano St, Dagupan", "distance": 1.8, "phone": "(075) 523-8899", "hours": "8:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 115, "lat": 16.0435, "lng": 120.3340 },
+
+  { "id": 12, "name": "Rose Pharmacy Mangaldan", "address": "Zone 2, Mangaldan", "distance": 0.9, "phone": "(075) 523-6677", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 100, "lat": 16.0710, "lng": 120.4035 },
+
+  { "id": 13, "name": "Mercury Drug Rosales", "address": "Carmen East, Rosales", "distance": 5.9, "phone": "(075) 582-5566", "hours": "8:00 AM – 10:00 PM", "stock_status": "Stock available", "stock_units": 135, "lat": 15.8945, "lng": 120.6330 },
+
+  { "id": 14, "name": "Generika Drugstore Villasis", "address": "Poblacion, Villasis", "distance": 6.3, "phone": "(075) 555-7788", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 85, "lat": 15.9030, "lng": 120.5880 },
+
+  { "id": 15, "name": "Watsons SM Dagupan", "address": "SM Center Dagupan", "distance": 2.5, "phone": "(075) 523-9900", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 220, "lat": 16.0432, "lng": 120.3325 },
+
+  { "id": 16, "name": "Rose Pharmacy Binmaley", "address": "Poblacion, Binmaley", "distance": 4.2, "phone": "(075) 554-2211", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 95, "lat": 16.0300, "lng": 120.2700 },
+
+  { "id": 17, "name": "Mercury Drug Alaminos", "address": "Lucap, Alaminos City", "distance": 10.8, "phone": "(075) 551-3344", "hours": "8:00 AM – 10:00 PM", "stock_status": "Stock available", "stock_units": 150, "lat": 16.1545, "lng": 119.9805 },
+
+  { "id": 18, "name": "Generika Drugstore San Fabian", "address": "Poblacion, San Fabian", "distance": 7.5, "phone": "(075) 542-7788", "hours": "8:00 AM – 8:00 PM", "stock_status": "Stock available", "stock_units": 88, "lat": 16.1300, "lng": 120.4000 },
+
+  { "id": 19, "name": "Watsons SM San Carlos", "address": "SM San Carlos", "distance": 6.5, "phone": "(075) 529-9900", "hours": "10:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 205, "lat": 15.9285, "lng": 120.3490 },
+
+  { "id": 20, "name": "Rose Pharmacy Lingayen", "address": "Maramba Blvd, Lingayen", "distance": 11.5, "phone": "(075) 542-5566", "hours": "7:00 AM – 9:00 PM", "stock_status": "Stock available", "stock_units": 102, "lat": 16.0220, "lng": 120.2320 }
 ]

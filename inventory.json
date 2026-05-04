@@ -1,0 +1,71 @@
+[
+  { "pharmacy_id": 1, "medicine_id": 101, "price": 5, "stock": 50 },
+  { "pharmacy_id": 1, "medicine_id": 102, "price": 8, "stock": 30 },
+  { "pharmacy_id": 1, "medicine_id": 117, "price": 6, "stock": 40 },
+
+  { "pharmacy_id": 2, "medicine_id": 101, "price": 5, "stock": 20 },
+  { "pharmacy_id": 2, "medicine_id": 104, "price": 7, "stock": 25 },
+  { "pharmacy_id": 2, "medicine_id": 118, "price": 9, "stock": 35 },
+
+  { "pharmacy_id": 3, "medicine_id": 103, "price": 12, "stock": 15 },
+  { "pharmacy_id": 3, "medicine_id": 105, "price": 6, "stock": 40 },
+  { "pharmacy_id": 3, "medicine_id": 120, "price": 10, "stock": 22 },
+
+  { "pharmacy_id": 4, "medicine_id": 101, "price": 5, "stock": 60 },
+  { "pharmacy_id": 4, "medicine_id": 113, "price": 7, "stock": 45 },
+  { "pharmacy_id": 4, "medicine_id": 119, "price": 9, "stock": 30 },
+
+  { "pharmacy_id": 5, "medicine_id": 102, "price": 8, "stock": 70 },
+  { "pharmacy_id": 5, "medicine_id": 106, "price": 11, "stock": 25 },
+  { "pharmacy_id": 5, "medicine_id": 122, "price": 10, "stock": 50 },
+
+  { "pharmacy_id": 6, "medicine_id": 107, "price": 15, "stock": 20 },
+  { "pharmacy_id": 6, "medicine_id": 108, "price": 18, "stock": 18 },
+  { "pharmacy_id": 6, "medicine_id": 121, "price": 6, "stock": 35 },
+
+  { "pharmacy_id": 7, "medicine_id": 109, "price": 20, "stock": 12 },
+  { "pharmacy_id": 7, "medicine_id": 110, "price": 14, "stock": 28 },
+  { "pharmacy_id": 7, "medicine_id": 123, "price": 5, "stock": 40 },
+
+  { "pharmacy_id": 8, "medicine_id": 111, "price": 4, "stock": 100 },
+  { "pharmacy_id": 8, "medicine_id": 112, "price": 4, "stock": 90 },
+  { "pharmacy_id": 8, "medicine_id": 124, "price": 6, "stock": 33 },
+
+  { "pharmacy_id": 9, "medicine_id": 101, "price": 5, "stock": 80 },
+  { "pharmacy_id": 9, "medicine_id": 114, "price": 9, "stock": 25 },
+  { "pharmacy_id": 9, "medicine_id": 125, "price": 8, "stock": 20 },
+
+  { "pharmacy_id": 10, "medicine_id": 115, "price": 10, "stock": 22 },
+  { "pharmacy_id": 10, "medicine_id": 116, "price": 12, "stock": 18 },
+  { "pharmacy_id": 10, "medicine_id": 118, "price": 9, "stock": 40 },
+
+  { "pharmacy_id": 11, "medicine_id": 101, "price": 5, "stock": 55 },
+  { "pharmacy_id": 11, "medicine_id": 104, "price": 7, "stock": 30 },
+
+  { "pharmacy_id": 12, "medicine_id": 117, "price": 6, "stock": 45 },
+  { "pharmacy_id": 12, "medicine_id": 120, "price": 10, "stock": 20 },
+
+  { "pharmacy_id": 13, "medicine_id": 102, "price": 8, "stock": 60 },
+  { "pharmacy_id": 13, "medicine_id": 113, "price": 7, "stock": 35 },
+
+  { "pharmacy_id": 14, "medicine_id": 105, "price": 6, "stock": 50 },
+  { "pharmacy_id": 14, "medicine_id": 124, "price": 6, "stock": 25 },
+
+  { "pharmacy_id": 15, "medicine_id": 122, "price": 10, "stock": 70 },
+  { "pharmacy_id": 15, "medicine_id": 118, "price": 9, "stock": 65 },
+
+  { "pharmacy_id": 16, "medicine_id": 111, "price": 4, "stock": 80 },
+  { "pharmacy_id": 16, "medicine_id": 121, "price": 6, "stock": 45 },
+
+  { "pharmacy_id": 17, "medicine_id": 103, "price": 12, "stock": 30 },
+  { "pharmacy_id": 17, "medicine_id": 106, "price": 11, "stock": 22 },
+
+  { "pharmacy_id": 18, "medicine_id": 110, "price": 14, "stock": 40 },
+  { "pharmacy_id": 18, "medicine_id": 116, "price": 12, "stock": 28 },
+
+  { "pharmacy_id": 19, "medicine_id": 108, "price": 18, "stock": 35 },
+  { "pharmacy_id": 19, "medicine_id": 109, "price": 20, "stock": 18 },
+
+  { "pharmacy_id": 20, "medicine_id": 114, "price": 9, "stock": 27 },
+  { "pharmacy_id": 20, "medicine_id": 125, "price": 8, "stock": 33 }
+]

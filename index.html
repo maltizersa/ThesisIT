@@ -1612,7 +1612,7 @@
       </div>
       <div id="section-found" class="section">
         <div class="results-heading"><h3 id="found-title"></h3><p>Sorted by distance from your location</p></div>
-        <div class="pharmacy-card"><div class="pharmacy-body">
+        <!-- <div class="pharmacy-card"><div class="pharmacy-body">
           <div class="pharmacy-top"><div><div class="pharmacy-name">HealthPlus Pharmacy</div><div class="pharmacy-addr"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>123 Main St, Downtown</div></div><span class="dist-badge">0.5 km</span></div>
           <div class="pharmacy-meta"><div class="meta-row"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(555) 123-4567</div><div class="meta-row"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Open 24/7</div></div>
           <div class="pharmacy-footer"><span class="stock-label">Stock available</span><span class="stock-units">150 units</span></div>
@@ -1629,7 +1629,7 @@
           <div class="pharmacy-meta"><div class="meta-row"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(555) 345-6789</div><div class="meta-row"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon–Fri: 9AM–9PM</div></div>
           <div class="pharmacy-footer"><span class="stock-label">Stock available</span><span class="stock-units">120 units</span></div>
           <button class="directions-btn"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Get Directions</button>
-        </div></div>
+        </div></div> -->
       </div>
 
       <div id="section-not-found" class="section">
@@ -1796,6 +1796,77 @@
 </div>
 
 <script>
+  function openDirections(address) {
+    const query = encodeURIComponent(address);
+    window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, '_blank');
+  }
+  fetch('pharmacies.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('section-found');
+
+    const heading = container.querySelector('.results-heading').outerHTML;
+
+    let html = heading;
+
+    data.forEach(p => {
+      html += `
+        <div class="pharmacy-card">
+          <div class="pharmacy-body">
+
+            <div class="pharmacy-top">
+              <div>
+                <div class="pharmacy-name">${p.name}</div>
+                <div class="pharmacy-addr">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  ${p.address}
+                </div>
+              </div>
+
+              <span class="dist-badge">${p.distance} KM</span>
+            </div>
+
+            <div class="pharmacy-meta">
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                ${p.phone}
+              </div>
+
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                ${p.hours}
+              </div>
+            </div>
+
+            <div class="pharmacy-footer">
+              <span class="stock-label">${p.stock_status}</span>
+              <span class="stock-units">${p.stock_units} units</span>
+            </div>
+
+            <button class="directions-btn"
+              onclick="openDirections('${p.address}')">
+              <svg viewBox="0 0 24 24">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              Get Directions
+            </button>
+
+          </div>
+        </div>
+      `;
+    });
+
+    container.innerHTML = html;
+  });
   const USERS = {}; 
   let currentUser = null;
 

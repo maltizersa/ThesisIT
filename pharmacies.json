@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "HealthPlus Pharmacy",
+    "address": "123 Main St, Downtown",
+    "distance": 0.5,
+    "phone": "(555) 123-4567",
+    "hours": "Open 24/7",
+    "stock_status": "Stock available",
+    "stock_units": 150,
+    "lat": 16.0703,
+    "lng": 120.4026
+  },
+  {
+    "id": 2,
+    "name": "CareRx Pharmacy",
+    "address": "456 Oak Avenue",
+    "distance": 1.2,
+    "phone": "(555) 234-5678",
+    "hours": "Mon–Sat: 8AM–10PM",
+    "stock_status": "Stock available",
+    "stock_units": 85,
+    "lat": 16.0720,
+    "lng": 120.4010
+  },
+  {
+    "id": 3,
+    "name": "MediCare Center",
+    "address": "789 Elm Street",
+    "distance": 2.1,
+    "phone": "(555) 345-6789",
+    "hours": "Mon–Fri: 9AM–9PM",
+    "stock_status": "Stock available",
+    "stock_units": 120,
+    "lat": 16.0735,
+    "lng": 120.3990
+  }
+]

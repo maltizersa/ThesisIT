@@ -2415,7 +2415,7 @@ function startAction() {
   let randomAd = ads[Math.floor(Math.random() * ads.length)];
   document.getElementById("adImage").src = randomAd;
 
-  countdown = 30;
+  countdown = Math.floor(Math.random() * 25) + 10;
   document.getElementById("closeBtn").disabled = true;
 
   timer = setInterval(() => {
